@@ -14,7 +14,7 @@ const GameRoom = ({ roomCode, playerName, isHost }) => {
       // In a component (e.g., in GameRoom.js for the host)
       const handleDownloadResults = () => {
         // window.open(`http://localhost:5000/download/${roomCode}`, '_blank');
-        window.open(`https://stakess-ft.onrender.com/download/${roomCode}`, '_blank');
+        window.open(`https://stakes-ft.onrender.com/download/${roomCode}`, '_blank');
       };
 
 
