@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import socket from '../socket';
 import '../GameRoom.css'
+import HostDashboard from './HostDashboard';
 
 const GameRoom = ({ roomCode, playerName, isHost }) => {
   const [roomData, setRoomData] = useState({ hostName: '', players: {} });
@@ -9,6 +10,13 @@ const GameRoom = ({ roomCode, playerName, isHost }) => {
   const [roundMessage, setRoundMessage] = useState('');
   const [showNotification, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState('');
+
+      // In a component (e.g., in GameRoom.js for the host)
+      const handleDownloadResults = () => {
+        window.open(`http://localhost:5000/download/${roomCode}`, '_blank');
+      };
+
+
 
   useEffect(() => {
     socket.on('roomUpdate', (data) => {
@@ -177,6 +185,14 @@ const GameRoom = ({ roomCode, playerName, isHost }) => {
           </div>
         )}
       </div>
+
+
+
+{isHost && <button onClick={handleDownloadResults}>Download Results</button>}
+
+      {/* Render the host dashboard table for a detailed view */}
+      {isHost && <HostDashboard players={roomData.players} roundBids={roundBids} />}
+
 
       {showNotification && (
         <div className="notification">
