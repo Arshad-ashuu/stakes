@@ -1,13 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "install-server": "cd server && npm install",
-    "start-server": "cd server && node app.js",
-    "install-client": "cd client && npm install",
-    "build-client": "cd client && bun run build",
-    "start-client": "cd client && bun run start"
+    "test": "echo \"Error: no test specified\" && exit 1",
+ "start": "node server.js",
+    "dev": "node server.js"
   },
   "keywords": [],
   "author": "",
