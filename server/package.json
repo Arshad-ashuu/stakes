@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "description": "stakes-8pio.onrender.com",
+  "description": "https://stakes-ft.onrender.com",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
