@@ -4,15 +4,13 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo 'No build step for backend'"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "description": "",
+  "type": "module",
+  "description": "stakes-8pio.onrender.com",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
