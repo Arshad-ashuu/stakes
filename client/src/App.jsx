@@ -12,7 +12,7 @@ function App() {
   if (!roomCode) {
     return (
       <div className="app-container">
-        <h1 className="title">Stakess 🤑🎉</h1>
+        <h1 className="title"><span className="t1">S</span><span className="t2">t</span><span className="t3">a</span><span className="t4">k</span><span className="t5">e</span> 🎰🎉</h1>
         <CreateRoom setRoomCode={setRoomCode} setPlayerName={setPlayerName} setIsHost={setIsHost} />
         <hr className="divider" />
         <JoinRoom setRoomCode={setRoomCode} setPlayerName={setPlayerName} />

@@ -1,10 +1,20 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Kablammo&display=swap');
 /* Modern CSS Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+
+/* .kablammo-uniquifier {
+  font-family: "Kablammo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+} */
 
 /* Custom Properties */
 :root {
@@ -44,18 +54,48 @@ body {
 }
 
 /* Title Styles */
+
 .title {
   font-size: 3.5rem;
   font-weight: 800;
   text-align: center;
   margin-bottom: 2rem;
-  background: var(--primary-gradient);
-  -webkit-background-clip: text;
+  font-family: "Kablammo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+  /* background: var(--primary-gradient);
+  -webkit-background-clip: text; */
   background-clip: text;
-  color: transparent;
+  /* color: transparent; */
   position: relative;
-  text-shadow: 0 2px 4px var(--shadow-color);
+  /* text-shadow: 0 2px 4px var(--shadow-color); */
 }
+
+.t1 {
+  color: #FF5733; /* Red */
+}
+.t8 {
+  color: #FFBD33; /* Orange */
+}
+.t5 {
+  color: gold; /* Yellow */
+}
+.t3 {
+  color: #33D633; /* Green */
+}
+.t4 {
+  color: #3388FF; /* Blue */
+}
+.t2 {
+  color: #9B33FF; /* Purple */
+}
+
+
+
+
 
 .title::after {
   content: '';
@@ -65,7 +105,7 @@ body {
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: var(--secondary-gradient);
+  /* background: var(--secondary-gradient); */
   border-radius: 2px;
 }
 
