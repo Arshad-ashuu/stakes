@@ -1,0 +1,267 @@
+.game-room {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1a1c2e 0%, #2a2d4a 100%);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  
+  .game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .room-code {
+    font-size: 2rem;
+    margin: 0;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .host-info {
+    margin-top: 0.5rem;
+  }
+  
+  .host-label {
+    color: #94a3b8;
+    margin-right: 0.5rem;
+  }
+  
+  .host-name {
+    color: #f8fafc;
+    font-weight: 600;
+  }
+  
+  .player-welcome {
+    text-align: right;
+  }
+  
+  .host-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%);
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+  }
+  
+  .game-content {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .action-panel {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .round-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 0.5rem;
+    border-left: 4px solid #6366f1;
+  }
+  
+  .bid-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .bid-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .bid-input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+  }
+  
+  .primary-button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f8fafc;
+  }
+  
+  .players-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .player-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+  }
+  
+  .player-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .player-card.eliminated {
+    opacity: 0.6;
+  }
+  
+  .player-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .player-name {
+    font-weight: 600;
+  }
+  
+  .player-points {
+    color: #94a3b8;
+  }
+  
+  .eliminated-badge {
+    background: #ef4444;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+  }
+  
+  .evaluation-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .evaluate-button {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .evaluate-button.correct {
+    background: #22c55e;
+    color: white;
+  }
+  
+  .evaluate-button.incorrect {
+    background: #ef4444;
+    color: white;
+  }
+  
+  .bids-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .bid-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bid-card.correct {
+    border-left: 4px solid #22c55e;
+  }
+  
+  .bid-card.incorrect {
+    border-left: 4px solid #ef4444;
+  }
+  
+  .bidder-name {
+    font-weight: 600;
+  }
+  
+  .bid-amount {
+    background: rgba(99, 102, 241, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+  }
+  
+  .notification {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .game-header {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+  
+    .player-welcome {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  
+    .bid-controls {
+      flex-direction: column;
+    }
+  
+    .players-list,
+    .bids-list {
+      grid-template-columns: 1fr;
+    }
+  }
