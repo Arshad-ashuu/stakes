@@ -1,15 +1,17 @@
 // server.js
-import express, { json } from 'express';
-import { createServer } from 'http';
-import socketIo from 'socket.io';
+import express from 'express';
+import http from 'http';
+import { Server as socketIo } from 'socket.io';
 import cors from 'cors';
+
 
 const app = express();
 app.use(cors());
-app.use(json());
+app.use(express.json());
 
-const server = createServer(app);
-const io = socketIo(server, { cors: { origin: '*' } });
+
+const server = http.createServer(app);
+const io = new socketIo(server, { cors: { origin: '*' } });
 
 /*
  In-memory store for rooms.
