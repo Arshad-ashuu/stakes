@@ -98,7 +98,7 @@ io.on('connection', (socket) => {
     }
     // Create a new round.
     rooms[roomCode].currentRound = { bids: {} };
-    io.to(roomCode).emit('newRound', { message: 'Round started! Answer orally and place your bid.' });
+    io.to(roomCode).emit('newRound', { message: 'Round started! write ur answer and place your bid.' });
     callback({ success: true });
     console.log(`New round started in room ${roomCode}`);
   });
@@ -142,17 +142,22 @@ io.on('connection', (socket) => {
     }
     bidRecord.evaluated = true;
     bidRecord.correct = isCorrect;
-
+  
     const player = rooms[roomCode].players[playerId];
     const bidAmount = bidRecord.bidAmount;
+    let pointsChangeMessage = '';
+  
     if (isCorrect) {
       player.points += bidAmount;
+      pointsChangeMessage = `${player.name}'s points have been doubled! New points: ${player.points}`;
     } else {
       player.points -= bidAmount;
       if (player.points <= 0) {
         player.eliminated = true;
       }
+      pointsChangeMessage = `${player.name}'s points have been deducted! New points: ${player.points}`;
     }
+  
     // Save the result for this round.
     const roundIndex = gameHistory[roomCode].rounds.length + 1;
     gameHistory[roomCode].rounds.push({
@@ -166,16 +171,18 @@ io.on('connection', (socket) => {
         },
       },
     });
-
+  
     io.to(roomCode).emit('roomUpdate', {
       hostName: rooms[roomCode].hostName,
       players: rooms[roomCode].players,
+      pointsChangeMessage,  // Send points change message to the client
     });
     callback({ success: true });
     console.log(`Bid evaluated in room ${roomCode} for ${playerId}: ${isCorrect ? 'Correct' : 'Incorrect'}`);
-
+  
     checkForWinner(roomCode);
   });
+  
 
   socket.on('disconnect', () => {
     console.log('Client disconnected:', socket.id);

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 /* Modern CSS Reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -6,6 +7,13 @@
   padding: 0;
 }
 
+
+.pixelify-sans-tit {
+  font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* .kablammo-uniquifier {
   font-family: "Kablammo", serif;
@@ -60,38 +68,53 @@ body {
   font-weight: 800;
   text-align: center;
   margin-bottom: 2rem;
-  font-family: "Kablammo", serif;
+  /* font-family: "Kablammo", serif;
+   */
+   font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  /* font-style: normal;
+  font-variation-settings:
+    "MORF" 0; */
+  /* background: var(--primary-gradient);
+  -webkit-background-clip: text; */
+  /* background-clip: text; */
+  color: #f3eef5;
+  /* position: relative; */
+  /* text-shadow: 0 2px 4px var(--shadow-color); */
+}
+
+.title-sub {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  /* font-family: "Kablammo", serif;
+   */
+   font-family: "Pixelify Sans", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "MORF" 0;
-  /* background: var(--primary-gradient);
-  -webkit-background-clip: text; */
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
   background-clip: text;
-  /* color: transparent; */
+  color: transparent;
   position: relative;
-  /* text-shadow: 0 2px 4px var(--shadow-color); */
+  text-shadow: 0 2px 4px var(--shadow-color);
+}
+.text-minsub{
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  /* font-family: "Kablammo", serif;
+   */
+   font-family: "Pixelify Sans";
+  color:#ed3228 ;
 }
 
-.t1 {
-  color: #FF5733; /* Red */
-}
-.t8 {
-  color: #FFBD33; /* Orange */
-}
-.t5 {
-  color: gold; /* Yellow */
-}
-.t3 {
-  color: #33D633; /* Green */
-}
-.t4 {
-  color: #3388FF; /* Blue */
-}
-.t2 {
-  color: #9B33FF; /* Purple */
-}
+
 
 
 

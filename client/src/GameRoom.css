@@ -220,8 +220,17 @@
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
   }
+
+  .eliminated-text{
+color:#dcd7d7;
+background:#c44e4e;
+padding:0.25rem 0.5rem;
+border-radius:0.25rem;
+font-size:1.4rem;
+margin-top: 1rem;
+  }
   
-  .notification {
+  /* .notification {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -232,7 +241,32 @@
     animation: slideIn 0.3s ease-out;
     z-index: 1000;
   }
-  
+   */
+/* GameRoom.css */
+
+/* Toast Notification Styles */
+.notification {
+  position: fixed;
+  top: 50%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Offset by half of its size to truly center it */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 9999; /* Ensure it appears on top */
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.notification.fade-out {
+  opacity: 0;
+}
+
+
+
+
   @keyframes slideIn {
     from {
       transform: translateY(100%);
